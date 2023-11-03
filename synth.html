@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Audio Synth</title> 
+  <link rel="stylesheet" href="styles.css"> 
+ </head> 
+ <body> 
+  <div class="control-container"> <!-- Volume --> 
+   <div class="slider-container"> <label for="volume">Volume</label> 
+    <input type="range" id="volume" min="0" max="1" step="0.01" value="1"> 
+   </div> <!-- Pitch --> 
+   <div class="slider-container"> <label for="pitch">Pitch</label> 
+    <input type="range" id="pitch" min="20" max="5000" value="440"> 
+   </div> <!-- Filter Cutoff --> 
+   <div class="slider-container"> <label for="cutoff">Fil. Cut.</label> 
+    <input type="range" id="cutoff" min="20" max="2000" value="2000"> 
+   </div> <!-- LFOs --> 
+   <div class="slider-container"> <label for="pitchLfoSpeed">Pch. LFO Freq.</label> 
+    <input type="range" id="pitchLfoSpeed" min="0" max="50" step="0.1" value="0"> 
+   </div> 
+   <div class="slider-container"> <label for="pitchLfoAmount">Pch. LFO Amt.</label> 
+    <input type="range" id="pitchLfoAmount" min="0" max="3000" value="0"> 
+   </div> 
+   <div class="slider-container"> <label for="volumeLfoSpeed">Vol. LFO Freq.</label> 
+    <input type="range" id="volumeLfoSpeed" min="0" max="100" step="0.1" value="0"> 
+   </div> 
+   <div class="slider-container"> <label for="volumeLfoAmount">Vol. LFO Amt.</label> 
+    <input type="range" id="volumeLfoAmount" min="0" max="1" step="0.01" value="0"> 
+   </div> 
+   <div class="slider-container"> <label for="cutoffLfoSpeed">Cut. LFO Freq.</label> 
+    <input type="range" id="cutoffLfoSpeed" min="0" max="100" step="0.1" value="0"> 
+   </div> 
+   <div class="slider-container"> <label for="cutoffLfoAmount">Cut. LFO Amt.</label> 
+    <input type="range" id="cutoffLfoAmount" min="0" max="1000" step="10" value="0"> 
+   </div> <!-- Waveform Selectors --> 
+   <div class="waveform-selector-container"> <label>Osc. Wf:</label> 
+    <input type="radio" name="oscillatorWaveform" value="sine" id="oscSine" checked> <label for="oscSine">Sin</label> 
+    <input type="radio" name="oscillatorWaveform" value="sawtooth" id="oscSaw"> <label for="oscSaw">Saw</label> 
+    <input type="radio" name="oscillatorWaveform" value="triangle" id="oscTri"> <label for="oscTri">Tri</label> 
+    <input type="radio" name="oscillatorWaveform" value="square" id="oscSqr"> <label for="oscSqr">Sqr</label> 
+   </div> 
+   <div class="waveform-selector-container"> <label>Vol. LFO Wf:</label> 
+    <input type="radio" name="volumeLfoWaveform" value="sine" id="volSine" checked> <label for="volSine">Sin</label> 
+    <input type="radio" name="volumeLfoWaveform" value="sawtooth" id="volSaw"> <label for="volSaw">Saw</label> 
+    <input type="radio" name="volumeLfoWaveform" value="triangle" id="volTri"> <label for="volTri">Tri</label> 
+    <input type="radio" name="volumeLfoWaveform" value="square" id="volSqr"> <label for="volSqr">Sqr</label> 
+   </div> 
+   <div class="waveform-selector-container"> <label>Pch. LFO Wf:</label> 
+    <input type="radio" name="pitchLfoWaveform" value="sine" id="pitchSine" checked> <label for="pitchSine">Sin</label> 
+    <input type="radio" name="pitchLfoWaveform" value="sawtooth" id="pitchSaw"> <label for="pitchSaw">Saw</label> 
+    <input type="radio" name="pitchLfoWaveform" value="triangle" id="pitchTri"> <label for="pitchTri">Tri</label> 
+    <input type="radio" name="pitchLfoWaveform" value="square" id="pitchSqr"> <label for="pitchSqr">Sqr</label> 
+   </div> 
+   <div class="waveform-selector-container"> <label>Cut. LFO Wf:</label> 
+    <input type="radio" name="cutoffLfoWaveform" value="sine" id="cutoffSine" checked> <label for="cutoffSine">Sin</label> 
+    <input type="radio" name="cutoffLfoWaveform" value="sawtooth" id="cutoffSaw"> <label for="cutoffSaw">Saw</label> 
+    <input type="radio" name="cutoffLfoWaveform" value="triangle" id="cutoffTri"> <label for="cutoffTri">Tri</label> 
+    <input type="radio" name="cutoffLfoWaveform" value="square" id="cutoffSqr"> <label for="cutoffSqr">Sqr</label> 
+   </div> <button id="toggleButton">Start Tone</button> <button id="defaultSettingsButton">Default Settings</button><button id="randomizeButton">Randomize</button> 
+   <div id="ribbon" class="ribbon"></div> 
+  </div> 
+  <script src="script.js"></script> 
+ </body>
+  </html>
